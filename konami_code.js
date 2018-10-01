@@ -3,22 +3,18 @@ let lis = []
 
 function init(e) {
   // Write your JavaScript code inside the init() function
-  if e.which == code[i]
-
-
-  if(lis != code){
-    for(let i=0;i<code.length;i++){
-      if(e.which == code[i]){
-        lis.push(e.which)
-      }
-
-    }
-  }else{
+  if(lis == code){
     let ans = ""
-    code.forEach(elem){
+    code.forEach(function(elem){
       ans += String.fromCharCode(elem);
-    }
+    })
     alert(ans);
+  }else{
+    if(e.which == code[0]){
+      lis.push(e.which)
+    }else{
+      lis = []
+    }
   }
 }
 
